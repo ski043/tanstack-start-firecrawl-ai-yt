@@ -4,13 +4,13 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
-import netlify from '@netlify/vite-plugin-tanstack-start' // ← add this
+import { nitro } from 'nitro/vite'
 
 const config = defineConfig({
   plugins: [
     devtools(),
-    //nitro(),
-    netlify(), // ← add this (anywhere in the array is fine)
+    nitro(),
+    //netlify(), // ← add this (anywhere in the array is fine)
 
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
@@ -20,6 +20,7 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
+  nitro: {},
 })
 
 export default config
