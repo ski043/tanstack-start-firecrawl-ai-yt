@@ -10,8 +10,6 @@ const config = defineConfig({
   plugins: [
     devtools(),
     nitro(),
-    //netlify(), // ← add this (anywhere in the array is fine)
-
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
@@ -20,7 +18,6 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
-  nitro: {},
 })
 
 export default config
