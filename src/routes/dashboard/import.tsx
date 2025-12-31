@@ -33,6 +33,30 @@ import { toast } from 'sonner'
 
 export const Route = createFileRoute('/dashboard/import')({
   component: RouteComponent,
+  head: () => ({
+    meta: [
+      { title: 'Import Content' },
+      {
+        name: 'description',
+        content:
+          'Import and save web pages to your library. Scrape single URLs or bulk import from websites.',
+      },
+      { property: 'og:title', content: 'Import Content' },
+      {
+        property: 'og:description',
+        content:
+          'Import and save web pages to your library. Scrape single URLs or bulk import from websites.',
+      },
+      { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:title', content: 'Import Content' },
+      {
+        name: 'twitter:description',
+        content:
+          'Import and save web pages to your library. Scrape single URLs or bulk import from websites.',
+      },
+    ],
+  }),
 })
 
 function RouteComponent() {

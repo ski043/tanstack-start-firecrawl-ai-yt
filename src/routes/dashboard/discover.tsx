@@ -26,6 +26,30 @@ import { toast } from 'sonner'
 
 export const Route = createFileRoute('/dashboard/discover')({
   component: RouteComponent,
+  head: () => ({
+    meta: [
+      { title: 'Discover' },
+      {
+        name: 'description',
+        content:
+          'Search the web for articles on any topic and import interesting content to your library.',
+      },
+      { property: 'og:title', content: 'Discover' },
+      {
+        property: 'og:description',
+        content:
+          'Search the web for articles on any topic and import interesting content to your library.',
+      },
+      { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:title', content: 'Discover' },
+      {
+        name: 'twitter:description',
+        content:
+          'Search the web for articles on any topic and import interesting content to your library.',
+      },
+    ],
+  }),
 })
 
 function RouteComponent() {
